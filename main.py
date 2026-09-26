@@ -7,6 +7,11 @@ app = FastAPI()
 students = [{"RollNo": 1, "name": "Praveen", "Age": 21}]
 
 
+@app.get("/")
+def home():
+    return {"message": "API is running", "docs": "/docs", "students": "/students"}
+
+
 class Student(BaseModel):
     RollNo: int
     name: str
