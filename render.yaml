@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: prasad-fastapi
+    runtime: docker
+    plan: free
+    region: singapore
+    healthCheckPath: /students
+    dockerContext: .
+    dockerfilePath: ./Dockerfile
